@@ -1,0 +1,47 @@
+Samenwerkingscontract
+
+Door ondertekening van dit contract verbinden de projectleden zich aan de, in dit
+contract, gestelde voorwaarden ten behoeve van de samenwerking binnen de kbs en de
+kwaliteit van de kbs.
+
+Projectdefinitie:
+Projectnaam:            PoC voor NerdyGadgets
+Projectomschrijving:        Gadgets verkopen aan consumenten met een webshop
+Duur van project:        10-01-2022 om 12:00 uur ‘s middags
+Begeleidende docent 1: M Ritsjouw
+Begeleidende docent 2: B Krol
+
+Voorwaarden
+Tijd:
+1. projectleden worden bij afwezigheid zonder geldige reden bij de eerste keer
+gewaarschuwd. Mocht dit een tweede keer voor komen dan zal dit gemeld worden bij de projectbegeleider/docent en kan hij of zij uit het team gezet worden. Dit is van toepassing op alle bijeenkomsten. Je dient altijd iets te laten weten!
+
+2. Tijdig aangeven als je in de problemen komt met projecten.
+
+3. Zo veel mogelijk na schooltijden bij elkaar komen voor project.
+
+Organisatie:
+1. Flexibel met "rollen" omgaan.
+rollen: Project leider - Jaap, Administrator - Mees, (Visual)Designer - Finn, Programmeur - Iedereen.
+
+2. code, planningen en bestanden in GitHub/GitLab.
+
+Sancties:
+bij niet na komen van de afspraken moet er getrakteerd worden op lunch.
+
+Ondertekening
+
+Datum:………………..
+
+Naam:                 Handtekening:
+
+------------------------------------------ -----------------------------------
+
+------------------------------------------ -----------------------------------
+
+------------------------------------------ -----------------------------------
+
+------------------------------------------ -----------------------------------
+
+------------------------------------------ -----------------------------------
+------------------------------------------ -----------------------------------
