@@ -9,6 +9,9 @@
             background-color:#666;
             color:white;
         }
+        td{
+            max-width: 180px;
+        }
     </style>
 
 </head>
@@ -49,6 +52,7 @@ include __DIR__ . "/header.php";
         cursor: pointer;
         outline: 0;}
 </style>
+<center>
 <table class="cart" cellpadding="10" cellspacing="1"
 <body>
 <h1>Inhoud Winkelwagen</h1>
@@ -102,44 +106,62 @@ foreach ($cart as $stockItemID => $aantal) {
                 $PrijsProduct = $ItemPrijs;
             }
         }
-    }echo "<table>
+
+    }
+    echo "<center>";
+    echo "<table> 
         <tr>
         <th>naam</th>
         <th>Aantal</th>
+        <th>verwijderen?</th>
         <th>prijs</th>
         </tr>";
 
     print("<tr>");
-    print("<td>".$NaamProduct."</td>");
+
+    print("<td> <a class='text-white' href='view.php?id=$stockItemID'>$NaamProduct </a></td>");
+//    print("<td>".$NaamProduct."</td>");
     ?>
+
     <td>
         <form action="Cart.php" method="post">
             <input type="number" name="aantal"  value="<?php print($aantal);?>" min="0"/><br>
             <input type="number"    id="Prijs"  name="ItemID"   value="<?php print($stockItemID);?>" readonly hidden>
             <input type="submit" name="save" value="Opslaan">
-            <input type="submit" name="Delete" value="Delete">
+    </td>
+    <td>
+            <input type="submit" name="Delete" value="Verwijder">
         </form>
     </td>
 
     <?php
     $TotaalPrijsPerProduct = $aantal*$PrijsProduct;
     $TotaalPrijs += $TotaalPrijsPerProduct;
-    print("<td>". round($TotaalPrijsPerProduct,2) ."</td>");
+    print("<td>"."€". round($TotaalPrijsPerProduct,2) ."</td>");
     print("</tr>");
     echo "</table>";
     echo "</center>";
 }
-echo "<table>
-<tr>
-<th>
-Totaal Prijs:
-</th>
-</tr>
-";
-print("<tr>");
-print("<td>".round($TotaalPrijs,2)."</td>");
-print ("<a href='view.php?id0'>Naar artikelpagina van artikel 0")
-?>
-<a class="button" href="Betaalpagina.php">Betalen</a>
+//echo "<table>
+//<tr>
+//<th>
+//Totaal Prijs:
+//</th>
+//</tr>
+//";
+//print("<tr>");
+//print("<td>". "€" .round($TotaalPrijs,2)."</td>");
+////print ("<a href='view.php?id0'>Naar artikelpagina van artikel 0")
+//?>
+
+
+<?php
+echo "<center>";
+//    print("  <a class='betalen' href='betaalpagina.php'>betalen </a>");
+print("<div class='totaalprijs'>". "Totaal prijs: €" .round($TotaalPrijs,2)."</div>");
+print("<div class='totaalprijs'> <a href='betaalpagina.php'>betalen</a> </div>");
+echo "</center>";
+    ?>
+
 </body>
 </html>

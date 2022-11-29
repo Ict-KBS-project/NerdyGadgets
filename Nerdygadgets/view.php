@@ -1,9 +1,7 @@
 <!-- dit bestand bevat alle code voor de pagina die één product laat zien -->
 <?php
 include __DIR__ . "/header.php";
-include __DIR__ . "/CartFuncties.php";
-
-$databaseConnection = mysqli_connect('localhost', 'root', '', 'nerdygadgets');
+include "CartFuncties.php";
 
 
 $StockItem = getStockItem($_GET['id'], $databaseConnection);
@@ -160,7 +158,7 @@ if (isset($_GET["id"])) {
 <!-- formulier via POST en niet GET om te zorgen dat refresh van pagina niet het artikel onbedoeld toevoegt-->
 <form method="post">
     <input type="number" name="stockItemID" value="<?php print($stockItemID) ?>" hidden>
-    <input type="submit" name="submit" value="Voeg toe aan winkelmandje">
+    <input class="cartbutton" type="submit" name="submit" value="Voeg toe aan winkelmandje">
 </form>
 
 <?php
