@@ -124,9 +124,9 @@ foreach ($cart as $stockItemID => $aantal) {
     ?>
 
     <td>
-        <form action="Cart.php" method="post">
+        <form action="cart.php" method="post">
             <input type="number" name="aantal"  value="<?php print($aantal);?>" min="0"/><br>
-            <input type="number"    id="Prijs"  name="ItemID"   value="<?php print($stockItemID);?>" readonly hidden>
+            <input type="number" name="ItemID"   value="<?php print($stockItemID);?>" readonly hidden>
             <input type="submit" name="save" value="Opslaan">
     </td>
     <td>
