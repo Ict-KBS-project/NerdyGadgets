@@ -115,7 +115,7 @@ function PakQueryPrijs($stockItemID){
     return $Query;
 }
 
-
+session_start();
 // initializing variables
 $username = "";
 $email = "";
@@ -125,6 +125,7 @@ $errors = array();
 $db = mysqli_connect('localhost', 'root', '', 'nerdygadgets');
 
 // REGISTER USER
+
 if (isset($_POST['reg_user'])) {
     // receive all input values from the form
     $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -260,3 +261,8 @@ if (isset($_POST['login_user'])) {
         }
     }
 }
+
+
+
+
+

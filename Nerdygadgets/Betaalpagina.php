@@ -1,7 +1,6 @@
-<?php include('database.php') ?>
 <!DOCTYPE html>
 <html lang = "en"
-<head>
+<head><?php include __DIR__ . "/header.php"?>
     <meta charset = "UTF-8"
     <title></title>
     <style>@import url("https://rsms.me/inter/inter.css");
@@ -72,7 +71,7 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            border: 2px solid var(--color-lighter-gray);
+            /*border: 1px solid var(--color-lighter-gray);*/
             padding: .5rem;
             border-radius: .25rem;
 
@@ -80,7 +79,8 @@
 
         .field__label {
 
-            font-size: 0.6rem;
+            /*font-size: 0.6rem;*/
+            font-size: 12px;
             font-weight: 300;
             text-transform: uppercase;
             margin-bottom: 0.25rem
@@ -88,7 +88,7 @@
         }
 
         .field__input {
-            padding: 0;
+            padding-left: 5px;
             margin: 0;
             border: 0;
             outline: 0;
@@ -97,8 +97,9 @@
             width: 100%;
             -webkit-appearance: none;
             appearance: none;
-            background-color: transparent;
-            color: #FFFFFF;
+            background-color: white;
+            color: black;
+            border-radius: 8px;
         }
         .field:focus-within {
             border-color: #000;
@@ -128,35 +129,34 @@
             border: 0;
             cursor: pointer;
             outline: 0;
-            text-align: center;
         }
         .button:focus-visible {
             background-color: #333;
         }</style>
 </head>
 </body><div class="container">
-    <h1>betalen </h1>
-    <p>vul uw gegevens in.</p>
+    <h1>Betalen</h1>
+    <p>Vul uw gegevens in.</p>
     <hr />
+    <form action="connect.php" method="post">
     <div class="form">
-        <?php include('errors.php'); ?>
         <div class="fields fields--2">
             <label class="field">
                 <span class="field__label" for="firstname">First name</span>
-                <input class="field__input" type="text" id="firstname" value="<?php echo $customername; ?>"  />
+                <input class="field__input" type="text" id="firstname" name="firstsname" />
             </label>
             <label class="field">
                 <span class="field__label" for="lastname">Last name</span>
-                <input class="field__input" type="text" id="lastname" value="<?php echo $lastname ; ?>" />
+                <input class="field__input" type="text" id="lastname" name="lastname" />
             </label>
         </div>
         <label class="field">
             <span class="field__label" for="address">Address</span>
-            <input class="field__input" type="text" id="address" value="<?php echo $adres; ?>" />
+            <input class="field__input" type="text" id="address" name="address"/>
         </label>
         <label class="field">
             <span class="field__label" for="land">land</span>
-            <select class="field__input" id="land" value="<?php echo $land; ?>">
+            <select class="field__input" id="land" name="land">
                 <option value=""></option>
                 <option value="Nerderland">Nederland</option>
                 <option value="Belgie">Belgie</option>
@@ -169,22 +169,23 @@
         <div class="fields fields--3">
             <label class="field">
                 <span class="field__label" for="postcode">postcode</span>
-                <input class="field__input" type="text" id="zipcode" value="<?php echo $postcode; ?>" />
+                <input class="field__input" type="text" id="zipcode" name="zipcode" />
             </label>
             <label class="field">
                 <span class="field__label" for="plaats">plaats</span>
-                <input class="field__input" type="text" id="city" value="<?php echo $plaats; ?>" />
+                <input class="field__input" type="text" id="city" name="city" />
             </label>
             <label class="field">
                 <span class="field__label" for="provincie">provincie</span>
-                <input class="field__input" type="text" id="provincie" value="<?php echo $provincie; ?>" />
+                <input class="field__input" type="text" id="provincie" name="provincie"/>
             </label>
         </div>
     </div>
+    </form>
     <div class="field">
         <label class="field">
             <span class="field__label" for="bank">bank</span>
-            <select class="field__input" id="bank" value="<?php echo $bank; ?>">
+            <select class="field__input" id="bank" name="bank">
                 <option value=""></option>
                 <option value="ING">ING</option>
                 <option value="KNAB">KNAB</option>
@@ -192,11 +193,11 @@
                 <option value="ABN">ABN</option>
                 <option value="AMRO">AMRO</option>
                 <option value="BNG">BNG</option>
-                <option value="NWB">NWB</option>
+                <optoin value="NWB">NWB</optoin>
             </select>
     </div>
     <hr>
-    <a class="button" href="Bedankt%20bestellen.php">Betalen</a>
+    <a class="button" href="Bedanktbestellen.php">Betalen</a>
 </div>
 
 </body>

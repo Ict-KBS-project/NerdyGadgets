@@ -56,10 +56,11 @@ $databaseConnection = connectToDatabase();
             </li>
             <li>
             <a href='cart.php' class="HrefDecoration" > winkelmandje</a>
-            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-cart-shopping"></i></a>
             </li>
             <li>
-                <a href="browse.php" class="HrefDecoration"><i class="fas fa -search search"></i> &nbsp  Zoeken</a>
+                <a href="browse.php" class="HrefDecoration"><i class="fas fa -search search"></i> &nbsp Zoeken</a>
+
             </li>
         </ul>
 
