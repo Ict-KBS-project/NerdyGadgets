@@ -18,7 +18,6 @@ $databaseConnection = connectToDatabase();
     <script src="https://kit.fontawesome.com/225bf921cc.js" crossorigin="anonymous"></script>
 
 
-
     <!-- Style sheets-->
     <link rel="stylesheet" href="Public/CSS/style.css" type="text/css">
     <link rel="stylesheet" href="Public/CSS/bootstrap.min.css" type="text/css">
@@ -55,11 +54,11 @@ $databaseConnection = connectToDatabase();
                 <a href="login.php" class="HrefDecoration"><i class="fas fa -search search"></i> Login &nbsp </a>
             </li>
             <li>
-            <a href='cart.php' class="HrefDecoration" > winkelmandje</a>
-            <i class="fa-solid fa-cart-shopping"></i></a>
+             <a href='cart.php' class="HrefDecoration" > <i class="fa-solid fa-cart-shopping"></i></a>
+
             </li>
             <li>
-                <a href="browse.php" class="HrefDecoration"><i class="fas fa -search search"></i> &nbsp Zoeken</a>
+                <a href="browse.php" class="HrefDecoration"><i class="fas fa -search search"></i> <i class="fa-solid fa-magnifying-glass"></i></a>
 
             </li>
         </ul>
