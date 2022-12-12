@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang = "en"
-<head><?php include __DIR__ . "/header.php"?>
+<head>
+    <?php
+    include __DIR__ . "/header.php";
+    include   "CartFuncties.php";
+
+    $databaseConnection = connectToDatabase();
+    ?>
     <meta charset = "UTF-8"
     <title></title>
     <style>@import url("https://rsms.me/inter/inter.css");
@@ -198,6 +204,13 @@
     </div>
     <hr>
     <a class="button" href="Bedanktbestellen.php">Betalen</a>
+   <?php  if ((isset ($_SESSION["cart"]))) {
+    $cart = ($_SESSION["cart"]);
+    foreach ($cart as $stockItemID => $value) {
+    changeStock($value, $stockItemID, $databaseConnection);
+    }
+    unset($_SESSION["cart"]);
+    } ?>
 </div>
 
 </body>

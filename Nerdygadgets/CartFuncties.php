@@ -1,6 +1,6 @@
 <?php
 
-session_start();                                // altijd hiermee starten als je gebruik wilt maken van sessiegegevens
+#session_start();                                // altijd hiermee starten als je gebruik wilt maken van sessiegegevens
 
 function getCart()
 {
@@ -41,4 +41,10 @@ function updateProductToCart($stockItemID, $aantal)
     $cart = getCart();                                  // eerst de huidige cart ophalen
     $cart[$stockItemID] = $aantal;      //zo ja: aantal naar $aantal veranderen
     saveCart($cart);
+}
+
+function changeStock($value, $stockItemID, $databaseConnection){//zodra een bestelling wordt geplaatst, worden de bestelde hoeveelheden van de voorraad afgeschreven.
+    $Query = "UPDATE StockItemHoldings 
+            SET QuantityOnHand = QuantityOnHand - '$value' WHERE StockItemID = '$stockItemID'";
+    $result = mysqli_query($databaseConnection, $Query);
 }

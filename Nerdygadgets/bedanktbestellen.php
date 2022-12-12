@@ -6,10 +6,6 @@ include __DIR__ . "/header.php";
 <html lang="en">
 <head>
 
-
-
-
-
     <title>Bedankt voor uw bestelling pagina. </title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>

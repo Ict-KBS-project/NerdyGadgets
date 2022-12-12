@@ -73,8 +73,8 @@ $cart = getCart();
 
 # Producten in $cart tonen + prijs
 foreach ($cart as $stockItemID => $aantal) {
-    $TotaalPrijs += $TotaalPrijs;
 
+    $TotaalPrijs += $TotaalPrijs;
     $NaamProduct = "";
     $PrijsProduct = 0;
 
@@ -142,22 +142,11 @@ foreach ($cart as $stockItemID => $aantal) {
     echo "</table>";
     echo "</center>";
 }
-//echo "<table>
-//<tr>
-//<th>
-//Totaal Prijs:
-//</th>
-//</tr>
-//";
-//print("<tr>");
-//print("<td>". "€" .round($TotaalPrijs,2)."</td>");
-////print ("<a href='view.php?id0'>Naar artikelpagina van artikel 0")
-//?>
+?>
 
 
 <?php
 echo "<center>";
-//    print("  <a class='betalen' href='betaalpagina.php'>betalen </a>");
 print("<div class='totaalprijs'>". "Totaal prijs: €" .round($TotaalPrijs,2)."</div>");
 print("<div class='totaalprijs'> <a href='betaalpagina.php'>betalen</a> </div>");
 echo "</center>";
