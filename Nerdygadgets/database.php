@@ -115,7 +115,7 @@ function PakQueryPrijs($stockItemID){
     return $Query;
 }
 
-session_start();
+
 // initializing variables
 $username = "";
 $email = "";
@@ -125,7 +125,6 @@ $errors = array();
 $db = mysqli_connect('localhost', 'root', '', 'nerdygadgets');
 
 // REGISTER USER
-
 if (isset($_POST['reg_user'])) {
     // receive all input values from the form
     $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -204,65 +203,3 @@ if (isset($_POST['login_user'])) {
         }
     }
 }
-// Bestel gegevens
-// initializing variables
-$customername = "";
-$lastname = "";
-$adres = "";
-$land = "";
-$postcode = "";
-$plaats = "";
-$provincie = "";
-$bank = "";
-$errors = array();
-
-if (isset($_POST['login_user'])) {
-    $customername = mysqli_real_escape_string($db, $_POST['customername']);
-    $lastname = mysqli_real_escape_string($db, $_POST['lastname']);
-    $adres = mysqli_real_escape_string($db, $_POST['adres']);
-    $land = mysqli_real_escape_string($db, $_POST['land']);
-    $postcode = mysqli_real_escape_string($db, $_POST['postcode']);
-    $plaats = mysqli_real_escape_string($db, $_POST['plaats']);
-    $provincie = mysqli_real_escape_string($db, $_POST['provincie']);
-    $bank = mysqli_real_escape_string($db, $_POST['bank']);
-
-    if (empty($customername)) {
-        array_push($errors, "Firstname is required");
-    }
-    if (empty($lastname)) {
-        array_push($errors, "lastname is required");
-    }
-    if (empty($adres)) {
-        array_push($errors, "Address is required");
-    }
-    if (empty($land)) {
-        array_push($errors, "Land is required");
-    }
-    if (empty($postcode)) {
-        array_push($errors, "Postcode is required");
-    }
-    if (empty($plaats)) {
-        array_push($errors, "Plaats is required");
-    }
-    if (empty($provincie)) {
-        array_push($errors, "Provincie is required");
-    }
-    if (empty($bank)) {
-        array_push($errors, "Bank is required");
-    }
-    if (count($errors) == 0) {
-        $query = "INSERT INTO bananen (customername, lastname, adres, land, postcode, plaats, provincie, bank) 
-                VALUES('$customername', '$lastname', '$adres', '$land', '$postcode', '$plaats', $provincie, '$bank')";
-        mysqli_query($db, $query);
-        if (mysqli_num_rows($results) == 1) {
-            $_SESSION['customername'] = $customername;
-            $_SESSION['success'] = "Bedankt";
-            header('location: bedankt%20bestellen.php');
-        }
-    }
-}
-
-
-
-
-

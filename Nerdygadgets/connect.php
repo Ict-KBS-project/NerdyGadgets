@@ -1,24 +1,26 @@
 <?php
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $address = $_POST['address'];
-    $land = $_POST['land'];
-    $zipcode = $_POST['zipcode'];
-    $city = $_POST['city'];
-    $provincie = $_POST['provincie'];
-//    $bank = $_POST['bank'];
+$voornaam = $_POST['Voornaam'];
+$achternaam = $_POST['Achternaam'];
+$email = $_POST['Email'];
+$adres = $_POST['Adres'];
+$postcode = $_POST['Postcode'];
+$woonplaats = $_POST['Woonplaats'];
+$land = $_POST['Land'];
+$telefoonnummer = $_POST['Telefoonnummer'];
 
-$conn = mysqli_connect("localhost", "root", "", "nerdygadgets");
-//    $conn = new mysqli('localhost','root','','nerdygadgets');
-    if($conn->connect_error){
-        die('connection failed : '.$conn->connect_error);
-    } else{
-        $stmt = $conn->prepare("insert into bananen(firstname, lastname, address, land, zipcode, city, provincie, bank)
-        values(?, ?, ?, ?, ?, ?, ?, ?,)");
-        $stmt->bind_param("ssssssss", $firstname, $lastname, $address, $land, $zipcode, $city, $provincie, $bank);
-        $stmt->execute();
-        echo "registration succesfully";
-        $stmt->close();
-        $conn->close();
-    }
+
+// Database connection
+$conn = new mysqli('localhost','root','','nerdygadgets');
+if($conn->connect_error){
+    echo "$conn->connect_error";
+    die("Connection Failed : ". $conn->connect_error);
+} else {
+    $stmt = $conn->prepare("insert into registratieForm(voornaam, achternaam, email, adres, postcode, woonplaats, land, telefoonnummer) 
+values(?, ?, ?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("ssssssss", $voornaam, $achternaam, $email, $adres, $postcode, $woonplaats, $land, $telefoonnummer );
+    $stmt->execute();
+    header("Location: http://localhost/Nerdygadgets/ideal.php");
+    $stmt->close();
+    $conn->close();
+}
 ?>

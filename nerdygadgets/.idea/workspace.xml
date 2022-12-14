@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cb012997-6a69-4ad8-b8dc-ffa0db4aea8f" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
+  <component name="ProjectId" id="2FAAOqyy8yulp9s19bRq1q2ATrc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/xampp/xampp 2.0/htdocs/Nerdygadgets-main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.webide.settings.project.settings.php&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;PHP&quot;
+    ]
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cb012997-6a69-4ad8-b8dc-ffa0db4aea8f" name="Changes" comment="" />
+      <created>1663924486103</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663924486103</updated>
+      <workItem from="1663924487424" duration="73000" />
+      <workItem from="1665039076483" duration="1235000" />
+      <workItem from="1665643923868" duration="1842000" />
+      <workItem from="1667383124426" duration="1414000" />
+      <workItem from="1668086639465" duration="33000" />
+      <workItem from="1669119400790" duration="223000" />
+      <workItem from="1669119642458" duration="1857000" />
+      <workItem from="1669196214885" duration="5501000" />
+      <workItem from="1669294358537" duration="61000" />
+      <workItem from="1669294420859" duration="717000" />
+      <workItem from="1669295316426" duration="5618000" />
+      <workItem from="1669375726174" duration="4869000" />
+      <workItem from="1669714931460" duration="1683000" />
+      <workItem from="1669717277956" duration="2806000" />
+      <workItem from="1669724548420" duration="20464000" />
+      <workItem from="1670849249353" duration="9000" />
+      <workItem from="1670850192053" duration="193000" />
+      <workItem from="1670850399905" duration="13763000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

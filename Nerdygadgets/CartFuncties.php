@@ -1,6 +1,6 @@
 <?php
 
-#session_start();                                // altijd hiermee starten als je gebruik wilt maken van sessiegegevens
+session_start();                                // altijd hiermee starten als je gebruik wilt maken van sessiegegevens
 
 function getCart()
 {
@@ -41,6 +41,15 @@ function updateProductToCart($stockItemID, $aantal)
     $cart = getCart();                                  // eerst de huidige cart ophalen
     $cart[$stockItemID] = $aantal;      //zo ja: aantal naar $aantal veranderen
     saveCart($cart);
+}
+
+function isCardEmpty() {
+    $cart = getCart();  // haal de huidige cart op
+
+    if (count($cart) == 0) {  // kijk of de cart leeg is
+        return true; // als de cart leeg is, geef true terug
+    }
+    return false; // als de cart niet leeg is, geef false terug
 }
 
 function changeStock($value, $stockItemID, $databaseConnection){//zodra een bestelling wordt geplaatst, worden de bestelde hoeveelheden van de voorraad afgeschreven.
