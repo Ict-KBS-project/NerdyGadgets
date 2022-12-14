@@ -52,14 +52,13 @@ $databaseConnection = connectToDatabase();
 <!-- code voor US3: zoeken -->
         <ul id="ul-class-navigation">
             <li>
-                <a href="login.php" class="HrefDecoration"><i class="fas fa -search search"></i> Login &nbsp </a>
+                <a href="login.php" class="HrefDecoration"><i class="fas fa -search search"></i>  <i class="fa-solid fa-circle-user"></i></a>
             </li>
             <li>
-            <a href='cart.php' class="HrefDecoration" > winkelmandje</a>
-            <i class="fa-solid fa-cart-shopping"></i></a>
+            <a href='cart.php' class="HrefDecoration" >  <i class="fa-solid fa-cart-shopping"></i></a>
             </li>
             <li>
-                <a href="browse.php" class="HrefDecoration"><i class="fas fa -search search"></i> &nbsp  Zoeken</a>
+                <a href="browse.php" class="HrefDecoration"><i class="fa-solid fa-magnifying-glass"></i></a>
             </li>
         </ul>
 
