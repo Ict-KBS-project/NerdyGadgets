@@ -3,7 +3,6 @@
 include __DIR__ . "/header.php";
 include "CartFuncties.php";
 
-
 $StockItem = getStockItem($_GET['id'], $databaseConnection);
 $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
 ?>
@@ -75,6 +74,16 @@ $StockItemImage = getStockItemImage($_GET['id'], $databaseConnection);
 
 
         <h1 class="StockItemID">Artikelnummer: <?php print $StockItem["StockItemID"]; ?></h1>
+        <?php
+            $temp_array = TempratuurMeting($databaseConnection);
+            if($StockItem["IsChillerStock"]){
+                foreach ($temp_array as $temp_sub_array) {
+                    foreach ($temp_sub_array as $temp) {
+                        print("temperature:  $temp ℃");
+                    }
+                }
+            }
+        ?>
         <h2 class="StockItemNameViewSize StockItemName">
             <?php print $StockItem['StockItemName']; ?>
         </h2>

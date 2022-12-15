@@ -58,6 +58,7 @@ function getStockItem($id, $databaseConnection) {
            SELECT SI.StockItemID, 
             (RecommendedRetailPrice*(1+(TaxRate/100))) AS SellPrice, 
             StockItemName,
+            IsChillerStock,
             CONCAT('Voorraad: ',QuantityOnHand)AS QuantityOnHand,
             SearchDetails, 
             (CASE WHEN (RecommendedRetailPrice*(1+(TaxRate/100))) > 50 THEN 0 ELSE 6.95 END) AS SendCosts, MarketingComments, CustomFields, SI.Video,
@@ -176,8 +177,6 @@ if (isset($_POST['reg_user'])) {
     }
 }
 
-// ...
-
 // LOGIN USER
 if (isset($_POST['login_user'])) {
     $username = mysqli_real_escape_string($db, $_POST['username']);
@@ -203,3 +202,4 @@ if (isset($_POST['login_user'])) {
         }
     }
 }
+

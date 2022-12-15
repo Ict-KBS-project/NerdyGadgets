@@ -1,7 +1,6 @@
 <?php
 
 session_start();                                // altijd hiermee starten als je gebruik wilt maken van sessiegegevens
-
 function getCart()
 {
     if (isset($_SESSION['cart'])) {               //controleren of winkelmandje (=cart) al bestaat
@@ -56,4 +55,21 @@ function changeStock($value, $stockItemID, $databaseConnection){//zodra een best
     $Query = "UPDATE StockItemHoldings 
             SET QuantityOnHand = QuantityOnHand - '$value' WHERE StockItemID = '$stockItemID'";
     $result = mysqli_query($databaseConnection, $Query);
+}
+
+function ChillerStock($stockItemID){
+    $Query = "
+        SELECT StockItemID 
+        FROM `stockitems` 
+        WHERE IsChillerStock = 1 ";
+    return $Query;
+}
+function TempratuurMeting($databaseConnection){
+    $query =  "
+        SELECT Temperature
+        FROM coldroomtemperatures
+        WHERE  ColdRoomSensorNumber = 4";
+
+      $result = mysqli_query($databaseConnection , $query); #voert sql uit
+       return  mysqli_fetch_all($result);                                                   # haalt sql gegevens op
 }

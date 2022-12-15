@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cb012997-6a69-4ad8-b8dc-ffa0db4aea8f" name="Changes" comment="icons inplaats van woorden voor login, winkelmand en zoeken" />
+    <list default="true" id="cb012997-6a69-4ad8-b8dc-ffa0db4aea8f" name="Changes" comment="icons inplaats van woorden voor login, winkelmand en zoeken">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
     <execution />
   </component>
   <component name="Git.Settings">
@@ -30,15 +32,28 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/xampp/xampp 2.0/htdocs/Nerdygadgets-main",
-    "settings.editor.selected.configurable": "reference.webide.settings.project.settings.php",
+    "settings.editor.selected.configurable": "preferences.sourceCode.MySQL, MariaDB",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ],
     "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
       "PHP"
     ]
   }
 }]]></component>
+  <component name="RunManager">
+    <configuration name="browse.php" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/browse.php/browse.php" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.browse.php" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -65,7 +80,8 @@
       <workItem from="1670849249353" duration="9000" />
       <workItem from="1670850192053" duration="193000" />
       <workItem from="1670850399905" duration="13763000" />
-      <workItem from="1671012763523" duration="722000" />
+      <workItem from="1671012763523" duration="888000" />
+      <workItem from="1671025232936" duration="13464000" />
     </task>
     <task id="LOCAL-00001" summary="icons inplaats van woorden voor login, winkelmand en zoeken">
       <created>1671013371379</created>
